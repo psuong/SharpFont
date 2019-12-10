@@ -1,18 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
+		<AssemblyName>SpaceWizards.SharpFont</AssemblyName>
 		<TargetFrameworks>net45;net472;netcoreapp3.0</TargetFrameworks>
-		<SignAssembly>true</SignAssembly>
-		<AssemblyOriginatorKeyFile>..\SharpFont.snk</AssemblyOriginatorKeyFile>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<Copyright>Copyright (c) Robert Rouhani 2012-2016</Copyright>
 		<Company>Robmaister</Company>
-		<Description>Cross-platform FreeType bindings for C#</Description>
-		<Version>4.0.2</Version>
+		<Description>Cross-platform FreeType bindings for C#. This package is modified from the original to multi-target include .NET Core 3. Note that on Windows you should provide your own copy of freetype6.dll, and this copy has to be modified (to fix some FFI issues). See this repo for more information: https://github.com/Robmaister/SharpFont.Dependencies</Description>
+		<Version>1.0.0</Version>
+		<RepositoryUrl>https://github.com/space-wizards/SharpFont</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/space-wizards/SharpFont</PackageProjectUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
 	<ItemGroup>
-		<None Include="..\SharpFont.dll.config" Condition="'$(TargetFramework)' == 'net45' or '$(TargetFramework)' == 'net472'">
+		<Content Include="..\SpaceWizards.SharpFont.dll.config">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<PackagePath>contentFiles/any/net45</PackagePath>
+		</Content>
+		<Content Include="..\SpaceWizards.SharpFont.dll.config">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<PackageCopyToOutput>true</PackageCopyToOutput>
+			<PackagePath>contentFiles/any/net472</PackagePath>
+		</Content>
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0-preview.2">

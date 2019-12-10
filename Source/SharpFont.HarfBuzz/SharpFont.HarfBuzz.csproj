@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+		<AssemblyName>SpaceWizards.SharpFont.HarfBuzz</AssemblyName>
   	<TargetFrameworks>net45;netcoreapp3.0</TargetFrameworks>
-		<SignAssembly>true</SignAssembly>
-		<AssemblyOriginatorKeyFile>..\SharpFont.snk</AssemblyOriginatorKeyFile>
 		<Version>0.1</Version>
 		<Company>Robmaister</Company>
 		<Copyright>Copyright © Robert Rouhani 2014-2016</Copyright>
