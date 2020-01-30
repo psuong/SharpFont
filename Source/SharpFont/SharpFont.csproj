@@ -5,8 +5,8 @@
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<Copyright>Copyright (c) Robert Rouhani 2012-2016</Copyright>
 		<Company>Robmaister</Company>
-		<Description>Cross-platform FreeType bindings for C#. This package is modified from the original to multi-target include .NET Core 3. Note that on Windows you should provide your own copy of freetype6.dll, and this copy has to be modified (to fix some FFI issues). See this repo for more information: https://github.com/Robmaister/SharpFont.Dependencies</Description>
-		<Version>1.0.0</Version>
+		<Description>Cross-platform FreeType bindings for C#. This package is modified from the original to multi-target include .NET Core 3. This package does not automatically provide a build of Freetype itself, so you will have to deal with this manually. Note that on Windows you cannot use a stock build of freetype.dll, as the build has to be modified (to fix some FFI issues). See this repo for more information: https://github.com/Robmaister/SharpFont.Dependencies</Description>
+		<Version>1.0.1</Version>
 		<RepositoryUrl>https://github.com/space-wizards/SharpFont</RepositoryUrl>
 		<PackageProjectUrl>https://github.com/space-wizards/SharpFont</PackageProjectUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
