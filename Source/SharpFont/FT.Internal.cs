@@ -77,7 +77,7 @@ namespace SharpFont
 
 				if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
 				{
-					return NativeLibrary.Load("/usr/X11/lib/libfreetype.6.dylib", typeof(FT).Assembly, path);
+					return NativeLibrary.Load("libfreetype.6.dylib", typeof(FT).Assembly, path);
 				}
 
 				return IntPtr.Zero;
