@@ -70,7 +70,7 @@ namespace SharpFont
 					return IntPtr.Zero;
 				}
 
-				if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+				if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) || RuntimeInformation.IsOSPlatform(OSPlatform.FreeBSD))
 				{
 					return NativeLibrary.Load("libfreetype.so.6", typeof(FT).Assembly, path);
 				}
