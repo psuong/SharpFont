@@ -1,6 +1,6 @@
-SharpFont [![NuGet Version](https://img.shields.io/nuget/vpre/SharpFont.svg)](https://www.nuget.org/packages/SharpFont) [![Gratipay Tips](https://img.shields.io/gratipay/Robmaister.svg)](https://gratipay.com/Robmaister)
+SharpFont [![NuGet Version](https://img.shields.io/nuget/vpre/SpaceWizards.SharpFont.svg)](https://www.nuget.org/packages/SpaceWizards.SharpFont)
 =========
-### Cross-platform FreeType bindings for .NET
+### Cross-platform FreeType bindings for .NET (Space Wizards Edition)
 
 SharpFont is a library that provides FreeType bindings for .NET. It's MIT
 licensed to make sure licensing doesn't get in the way of using the library in
@@ -31,9 +31,9 @@ The equivalent code in C# with SharpFont is:
 Face face = new Face(library, "./myfont.ttf");
 ```
 
-##Quick Start
+## Quick Start
 
-###NuGet
+### NuGet
 SharpFont is available on [NuGet][2]. It can be installed by issuing the
 following command in the package manager console:
 
@@ -41,7 +41,7 @@ following command in the package manager console:
 PM> Install-Package SharpFont
 ```
 
-###From Source
+### From Source
 Clone the repository and compile the solution. Copy `SharpFont.dll` to your
 project and include it as a reference. On Windows, you must include a compiled
 copy of FreeType2 as `freetype6.dll` in the project's output directory. It is
@@ -57,16 +57,16 @@ The [.editorconfig](http://editorconfig.org/) file in the project works with the
 extension and the [Format document on Save](https://visualstudiogallery.msdn.microsoft.com/3ea1c920-69c4-441f-9979-ccc2752dac56) 
 extension makes it basically automatic.
 
-####Mono
+#### Mono
 With the removal of the `WIN64` configurations, the included `Makefile` is
 effectively redundant. However, you can still build SharpFont by calling
 `make` while in the root directory of this project.
 
-####FreeType
+#### FreeType
 A large number of FreeType builds for Windows are now available in the
 [SharpFont.Dependencies][4] repository.
 
-##Known Issues
+## Known Issues
 
 While SharpFont is fully compatible with and runs on 64-bit Windows, it relies
 on a patch for FreeType to do this. This patch is already included in
@@ -74,7 +74,7 @@ on a patch for FreeType to do this. This patch is already included in
 a user of the library. If you are compiling FreeType from source, you can find
 the patch and instructions at the same location.
 
-##License
+## License
 
 As metioned earlier, SharpFont is licensed under the MIT License. The terms of
 the MIT license are included in both the [LICENSE][6] file and below:
@@ -113,7 +113,7 @@ Portions of this software are copyright (c) 2016 The FreeType Project
 
 
 [1]: http://taoframework.svn.sourceforge.net/viewvc/taoframework/trunk/src/Tao.FreeType/
-[2]: https://nuget.org/packages/SharpFont/
+[2]: https://nuget.org/packages/SpaceWizards.SharpFont/
 [3]: SharpFont/FT.Internal.cs
 [4]: https://github.com/Robmaister/SharpFont.Dependencies
 [5]: https://github.com/Robmaister/SharpFont.Dependencies/tree/master/freetype2
