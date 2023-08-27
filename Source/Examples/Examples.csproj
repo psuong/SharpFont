@@ -1,74 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{81158C54-C830-4056-B5D6-AE9059741B20}</ProjectGuid>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net7.0-windows</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Examples</RootNamespace>
     <AssemblyName>Examples</AssemblyName>
-    <FileAlignment>512</FileAlignment>
     <StartupObject>Examples.Program</StartupObject>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
-    <TargetFrameworkProfile />
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\..\Binaries\Examples\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>false</Prefer32Bit>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
-    <OutputPath>..\..\Binaries\Examples\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>false</Prefer32Bit>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'NET20|AnyCPU'">
-    <OutputPath>bin\NET20\</OutputPath>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="ExampleForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ExampleForm.Designer.cs">
-      <DependentUpon>ExampleForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FontFormat.cs" />
-    <Compile Include="FontService.cs" />
-    <Compile Include="Forms\LabeledToolStripComboBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\LabeledToolStripComboBox.Designer.cs">
-      <DependentUpon>LabeledToolStripComboBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ExampleForm.resx">
-      <DependentUpon>ExampleForm.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\Dependencies\freetype2\2.5.5\msvc10\x64\freetype6.dll">
       <Link>x64\freetype6.dll</Link>
@@ -101,21 +39,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SharpFont.GDI\SharpFont.Gdi.csproj">
-      <Project>{544493f1-3a5c-4576-975b-06b63ce0175f}</Project>
-      <Name>SharpFont.Gdi</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SharpFont\SharpFont.csproj">
-      <Project>{ecd55e3b-1139-4f0d-af63-3f471aaf6e91}</Project>
-      <Name>SharpFont</Name>
-    </ProjectReference>
+    <ProjectReference Include="..\SharpFont.GDI\SharpFont.Gdi.csproj" />
+    <ProjectReference Include="..\SharpFont\SharpFont.csproj" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

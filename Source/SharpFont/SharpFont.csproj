@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<AssemblyName>SpaceWizards.SharpFont</AssemblyName>
-		<TargetFrameworks>net45;net472;netcoreapp3.0</TargetFrameworks>
+		<TargetFramework>net7.0</TargetFramework>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<Copyright>Copyright (c) Robert Rouhani 2012-2016</Copyright>
 		<Company>Robmaister</Company>
@@ -11,25 +11,4 @@
 		<PackageProjectUrl>https://github.com/space-wizards/SharpFont</PackageProjectUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	</PropertyGroup>
-	<ItemGroup>
-		<Content Include="..\SpaceWizards.SharpFont.dll.config">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-			<PackageCopyToOutput>true</PackageCopyToOutput>
-			<PackagePath>contentFiles/any/net45</PackagePath>
-		</Content>
-		<Content Include="..\SpaceWizards.SharpFont.dll.config">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-			<PackageCopyToOutput>true</PackageCopyToOutput>
-			<PackagePath>contentFiles/any/net472</PackagePath>
-		</Content>
-	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0-preview.2">
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-			<PrivateAssets>all</PrivateAssets>
-		</PackageReference>
-	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" Condition="'$(TargetFramework)' == 'net45'"/>
-	</ItemGroup>
 </Project>

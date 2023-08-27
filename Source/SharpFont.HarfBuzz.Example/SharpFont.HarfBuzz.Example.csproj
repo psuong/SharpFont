@@ -1,14 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-		<TargetFrameworks>net45;netcoreapp3.0</TargetFrameworks>
+		<TargetFramework>net7.0</TargetFramework>
 		<OutputType>Exe</OutputType>
   </PropertyGroup>
   <ItemGroup>
-		<PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0-preview.2">
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-			<PrivateAssets>all</PrivateAssets>
-		</PackageReference>
-		<PackageReference Condition="'$(TargetFramework)' == 'netcoreapp3.0'" Include="System.Drawing.Common" Version="4.6.0" />
+		<PackageReference Include="System.Drawing.Common" Version="4.6.0" />
 	</ItemGroup>
 <!--  <ItemGroup>
     <Content Include="..\..\Dependencies\SharpFont\Dependencies\freetype2\2.5.5\msvc10\x86\freetype6.dll">
