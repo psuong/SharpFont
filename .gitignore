@@ -51,3 +51,6 @@ _ReSharper*/
 #NuGet
 *.nupkg
 .idea/
+
+#Visual Studio
+.vs/

@@ -63,25 +63,25 @@ namespace SharpFont
 				return;
 			}
 
-			NativeLibrary.SetDllImportResolver(typeof(FT).Assembly, (name, assembly, path) =>
-			{
-				if (name != FreetypeDll)
-				{
-					return IntPtr.Zero;
-				}
+			// NativeLibrary.SetDllImportResolver(typeof(FT).Assembly, (name, assembly, path) =>
+			// {
+			// 	if (name != FreetypeDll)
+			// 	{
+			// 		return IntPtr.Zero;
+			// 	}
 
-				if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) || RuntimeInformation.IsOSPlatform(OSPlatform.FreeBSD))
-				{
-					return NativeLibrary.Load("libfreetype.so.6", typeof(FT).Assembly, path);
-				}
+			// 	if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) || RuntimeInformation.IsOSPlatform(OSPlatform.FreeBSD))
+			// 	{
+			// 		return NativeLibrary.Load("libfreetype.so.6", typeof(FT).Assembly, path);
+			// 	}
 
-				if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-				{
-					return NativeLibrary.Load("libfreetype.6.dylib", typeof(FT).Assembly, path);
-				}
+			// 	if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+			// 	{
+			// 		return NativeLibrary.Load("libfreetype.6.dylib", typeof(FT).Assembly, path);
+			// 	}
 
-				return IntPtr.Zero;
-			});
+			// 	return IntPtr.Zero;
+			// });
 		}
 #endif
 
